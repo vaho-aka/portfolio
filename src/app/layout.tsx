@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navigation from './../components/navbar/Navigation';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'IRNA RAKOTOARINIRINA',
@@ -14,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`antialiased ${montserrat.className}`}>
         <Navigation />
-        {children}
+        <div className="max-w-screen-lg mx-auto my-4">{children}</div>
       </body>
     </html>
   );
