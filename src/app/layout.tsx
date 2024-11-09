@@ -43,7 +43,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${montserrat.className}`}>
         <Navigation />
-        <div className="max-w-screen-lg mx-auto my-16">{children}</div>
+        <div className="max-w-screen-xl mx-auto my-16 py-4 sm:px-4">
+          {children}
+        </div>
       </body>
     </html>
   );
